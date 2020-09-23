@@ -20,7 +20,12 @@ def get_weather_bot_response(user_response):
   elif user_response == "smokey":
     return choice(bot_response_smokey)
   
-
-
   else:
     return "I don't recognize weather pattern"
+
+    print("Welcome to the weather bot")
+    print("Please enter you current weather")
+
+    user_response = ""
+    while True:
+        user_response = input("How is the weather today?")
