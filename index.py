@@ -2,7 +2,6 @@ from random import choice
 
 def get_weather_bot_response(user_response):
 
-  #add some bot responses to this list
   bot_response_sunny = ["omg! great!", "keep shining!", "yay"]
   bot_response_rainy = ["bring a coat!", "dont forget an umbrella"]
   bot_response_snowy = ["check the news if you got school or work!", "stay warm!"]
@@ -23,9 +22,15 @@ def get_weather_bot_response(user_response):
   else:
     return "I don't recognize weather pattern"
 
-    print("Welcome to the weather bot")
-    print("Please enter you current weather")
+print("Welcome to the weather bot")
+print("Please enter you current weather")
 
-    user_response = ""
-    while True:
-        user_response = input("How is the weather today?")
+user_response = ""
+while True:
+    user_response = input("How is the weather today? ")
+
+    if user_response == "done":
+        break
+
+bot_response = get_weather_bot_response(user_response)
+print(bot_response)
